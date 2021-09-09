@@ -14,7 +14,7 @@
 # fair -> 15%
 # bad -> 10%
 
-bill_amount = input("Bill amount: ")
+bill_amount = float(input("Bill amount: "))
 level_of_service = input("Was your service 'good,' 'fair,' or 'bad'? ")
 if level_of_service.lower() == 'good':
     tip_amount = 0.20
