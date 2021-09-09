@@ -23,13 +23,14 @@ elif level_of_service.lower() == 'fair':
 elif level_of_service.lower() == 'bad':
     tip_amount = 0.10
 
-tip_money = tip_amount * 100
-total_amount = float(bill_amount) + tip_amount * float(bill_amount)
-print(f"Your bill amount is: ${bill_amount}")
+tip_money = tip_amount * bill_amount
+total_amount = bill_amount + tip_money
+print(f"Your bill amount is: ${bill_amount:.2f}")
 print(f"Level of service? {level_of_service}")
-print(f"Your tip amount is: ${tip_money}")
-print("Your total bill is: $" + "%.2f" % total_amount)
+print(f"Your tip amount is: ${tip_money:.2f}")
+print(f"Your total bill is: ${total_amount:.2f}")
 
+print("-----")
 # 2. Tip Calculator 2
 # Allow the ability to divide the check into a equal parts amount a number of people. The user 
 # will enter the number of people to be divided amongst.
@@ -38,6 +39,7 @@ split_num = int(input("How many ways would you like to split the bill? "))
 amount_per_person = (total_amount / split_num)
 print("Amount per person: $" + "%.2f" % amount_per_person)
 
+print("-----")
 # 3. How many coins?
 # Write a program that will prompt you for how many coins you want. Initially you have no coins. 
 # It will ask you if you want a coin? If you type "yes", it will give you one coin, and print 
@@ -53,6 +55,7 @@ while want_coin == "yes":
     want_coin = input("Do you want another coin? yes or no? ")
 print("All done")
 
+print("-----")
 # 4. Print a Box
 # Given a height and width, input by the user, print a box consisting of * characters as its border.
 
@@ -68,6 +71,7 @@ while height_counter - 1 > 0:
     height_counter += -1
 print("*" * (width))
 
+print("-----")
 # 5. Print a Triangle
 # Print a triangle consisting of * characters like this:
 #    *
@@ -82,6 +86,7 @@ print ((" " * 2) + "***")
 print (" " + "*****")
 print("*******")
 
+print("-----")
 # Let's get fancy
 
 print("Let's make a triangle! How wide would you like it to be?")
@@ -95,6 +100,7 @@ while (counter < width) and space_count >= 0:
     counter += 2
     space_count += -1
 
+print("-----")
 # 6. Multiplication Table
 # Print the multiplication table for numbers from 1 up to 10.
 
@@ -107,3 +113,5 @@ while counter < 11:
     counter += 1
     times = 1
 
+print("-----")
+print("You did it! Now go take a nap.")
