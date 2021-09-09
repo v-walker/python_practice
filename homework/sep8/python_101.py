@@ -82,13 +82,15 @@ print ((" " * 2) + "***")
 print (" " + "*****")
 print("*******")
 
-# # Let's get fancy
+# Let's get fancy
 
+print("Let's make a triangle! How wide would you like it to be?")
+width = int(input("Enter a number: "))
 space = " "
 counter = 1
-space_count = 3
+space_count = int((width - counter) / 2)
 
-while counter < 11 and space_count >= 0:
+while (counter < width) and space_count >= 0:
     print (space * (space_count) + "*" * counter)
     counter += 2
     space_count += -1
@@ -97,16 +99,11 @@ while counter < 11 and space_count >= 0:
 # Print the multiplication table for numbers from 1 up to 10.
 
 counter = 1
+times = 1
 while counter < 11:
-    print(f"{counter} X 1 = {1 * counter}")
-    print(f"{counter} X 2 = {2 * counter}")
-    print(f"{counter} X 3 = {3 * counter}")
-    print(f"{counter} X 4 = {4 * counter}")
-    print(f"{counter} X 5 = {5 * counter}")
-    print(f"{counter} X 6 = {6 * counter}")
-    print(f"{counter} X 7 = {7 * counter}")
-    print(f"{counter} X 8 = {8 * counter}")
-    print(f"{counter} X 9 = {9 * counter}")
-    print(f"{counter} X 10 = {10 * counter}")
+    while times < 11:
+        print(f"{counter} X {times} = {counter * times}")
+        times += 1
     counter += 1
+    times = 1
 
