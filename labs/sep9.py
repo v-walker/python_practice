@@ -134,56 +134,85 @@ print("-----")
 #     index += 1
 # print(nums_times_5)
 
-# # 15. Reverse the String "DigitalCrafts"
+# 15. Reverse the String "DigitalCrafts"
 
-# my_string = "DigitalCrafts"
-# dc_list = list(my_string)
-# print(dc_list)
-# dc_list_rev = []
+# # my_string = "DigitalCrafts"
+# # dc_list = list(my_string)
+# # print(dc_list)
+# # dc_list_rev = []
 
-# for letter in range(len(dc_list) - 1, -1, -1):
-#     dc_list_rev += dc_list[letter]
-# print(dc_list_rev)
+# # for letter in range(len(dc_list) - 1, -1, -1):
+# #     dc_list_rev += dc_list[letter]
+# # print(dc_list_rev)
 
-# reversed_string = "".join(dc_list_rev)
-# print(reversed_string)
+# # reversed_string = "".join(dc_list_rev)
+# # print(reversed_string)
+
+# # or
+# my_string2 = "DigitalCrafts"
+# dc_rev = "" # empty string
+
+# index = len(my_string2) - 1 # index 12 --> last item in string
+# while index >= 0: 
+#     dc_rev += my_string2[index]
+#     index -= 1
+# print(dc_rev)
 
 
-# # 16. Crete a range
-# # [0, 1, 2, 3, 4, 5]
+# 1. start at index 12
+# 2. add index 12 to empty string (dc_rev)--> s
+# 3. index decrement to 11
+# 4. start loop again
+# 5. once my index equals 0 will run one last time
 
-# num_list = []
-# index = 0
 
-# while index < 6:
-#     num_list.append(index)
-#     index += 1
-# print(num_list)
 
-# # 17. Create a range
-# # [6, 8, 10, 12, 14, 16]
+# 16. Crete a range
+# [0, 1, 2, 3, 4, 5]
 
-# num_list2 = list(range(6, 17, 2))
-# print(num_list2)
+num_list = []
+index = 0
 
-# # 18. Loop through the planet list using a for loop and print the name 
-# # of each planet
+while index < 6:
+    num_list.append(index)
+    index += 1
+print(num_list)
 
-# for planet in planets:
-#     print(planet)
+# 17. Create a range
+# [6, 8, 10, 12, 14, 16]
 
-# # 19. Loop through the USCities list and print the name of each city
+num_list2 = list(range(6, 17, 2))
+print(num_list2)
 
-# for city in USCities:
-#     print(city)
+# 18. Loop through the planet list using a for loop and print the name 
+# of each planet
 
-# # 20. Loop through the following sequence
-# nums = [6, 8, 10, 12, 14, 16] 
-# # multiply each number by 5.
-# # print the result.
+for planet in planets:
+    print(planet)
 
-# for num in nums:
-#     print(num * 5)
+print("-----")
 
-# # 21. Create a multiplication table for 1-10
-# # i.e. 1x1 = 1 1x2 = 2 1x3 = 3
+# 19. Loop through the USCities list and print the name of each city
+
+for city in USCities:
+    print(city)
+
+print("-----")
+
+# 20. Loop through the following sequence
+nums = [6, 8, 10, 12, 14, 16] 
+# multiply each number by 5.
+# print the result.
+
+for num in nums:
+    print(num * 5)
+
+print("-----")
+
+# 21. Create a multiplication table for 1-10
+# i.e. 1x1 = 1 1x2 = 2 1x3 = 3
+
+for num in range(1, 11):
+    for num2 in range(1, 11):
+        print (f"{num} x {num2} = {num * num2}")
+    print("-----\n")

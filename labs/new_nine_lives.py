@@ -10,11 +10,9 @@ lives = list(heart_symbol * 9)
 words = ["pizza", "fairy", "teeth", "shirt", "otter", "plane"]
 
 secret_word = list(random.choice(words)) # selects random word from list and assigns to secret_word variable
-print(secret_word) # for debugging - comment this out at the end
+# print(secret_word) # for debugging - comment this out at the end
 
 final_word = "".join(secret_word.copy())
-
-# secret_word = "teeth"
 
 clue = list('?????') # question marks stored as list
 
