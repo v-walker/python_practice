@@ -13,13 +13,10 @@ output_message = ""
 
 # loop through each character in input message and append changes to output message
 
-for char in message:
-    c = char
-    index = 1
-    if char == message[index + 1]:
-        output_message += char * 5
-    
+for char in range(len(message)):
+    doubles = message[char: char + 2]
+    if doubles in long_vowels:
+        output_message += message[char] * 4
     else:
-        output_message += char
-    index += 1
+        output_message += message[char]
 print(output_message)
