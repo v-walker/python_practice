@@ -46,7 +46,6 @@ def invalid_input():
 print("\nWelcome to your to-do list app!\n")
 
 app_running = True
-time_to_delete = True
 
 while app_running == True:
 
@@ -72,17 +71,17 @@ Please select from the following options:
 
     elif choice == "2":
         print_todos()
-        while time_to_delete == True:
-            which_priority = input("What priority level is your item?\n Enter one of the following: 'High', 'Medium', 'Low' ").lower()
-            if which_priority == 'high' or which_priority == 'medium' or which_priority == 'low':
-                item_to_del = int(input("\nWhat would you like to check off or delete? (Please enter a number): "))
-                if item_to_del <= len(todos[which_priority]):
-                    print(f"\"{todos[which_priority][item_to_del - 1]}\" deleted!")
-                    del todos[which_priority][item_to_del - 1]
-                    time_to_delete = False
-                elif item_to_del > len(todos[which_priority]):
-                    invalid_input()
-            else:
+        which_priority = input("What priority level is your item?\n Enter one of the following: 'High', 'Medium', 'Low' ").lower()
+        if which_priority == 'high' or which_priority == 'medium' or which_priority == 'low':
+            item_to_del = int(input("\nWhat would you like to check off or delete? (Please enter a number): "))
+            if item_to_del == 0:
+                invalid_input()
+            elif item_to_del > len(todos[which_priority]):
+                invalid_input()
+            elif item_to_del <= len(todos[which_priority]):
+                print(f"\"{todos[which_priority][item_to_del - 1]}\" deleted!")
+                del todos[which_priority][item_to_del - 1]
+        else:
                 invalid_input()
 
     elif choice == "3":
@@ -95,6 +94,5 @@ Please select from the following options:
     else:
         invalid_input()
         
-
 with open('todo.json', 'w') as fh:
     json.dump(todos, fh)
